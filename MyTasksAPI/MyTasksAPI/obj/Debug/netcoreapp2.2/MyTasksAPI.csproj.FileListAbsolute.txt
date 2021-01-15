@@ -1,0 +1,14 @@
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.deps.json
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.runtimeconfig.json
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.runtimeconfig.dev.json
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.dll
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.csprojAssemblyReference.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.AssemblyInfoInputs.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.AssemblyInfo.cs
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.RazorAssemblyInfo.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.RazorAssemblyInfo.cs
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.RazorTargetAssemblyInfo.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.genruntimeconfig.cache
