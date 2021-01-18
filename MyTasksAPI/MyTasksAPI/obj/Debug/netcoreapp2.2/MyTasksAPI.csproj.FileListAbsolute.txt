@@ -12,3 +12,7 @@ C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\net
 C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.RazorAssemblyInfo.cs
 C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.RazorTargetAssemblyInfo.cache
 C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.genruntimeconfig.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.pdb
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.csproj.CoreCompileInputs.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.dll
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.pdb
