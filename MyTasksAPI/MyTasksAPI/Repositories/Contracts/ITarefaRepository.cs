@@ -8,7 +8,7 @@ namespace MyTasksAPI.Repositories.Contracts
 {
     public interface ITarefaRepository
     {
-        void Sincronizacao(List<Tarefa> tarefas);
+        List<Tarefa> Sincronizacao(List<Tarefa> tarefas);
 
         List<Tarefa> Restauracao(ApplicationUser usuario, DateTime dataUltimaSincronizacao);
     }
