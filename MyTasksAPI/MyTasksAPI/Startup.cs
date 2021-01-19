@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyTasksAPI.Database;
+using MyTasksAPI.Models;
 using MyTasksAPI.Repositories;
 using MyTasksAPI.Repositories.Contracts;
 
@@ -39,6 +40,8 @@ namespace MyTasksAPI
             services.AddScoped<ITarefaRepository, TarefaRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<MinhasTarefasContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +57,8 @@ namespace MyTasksAPI
                 app.UseHsts();
             }
 
+            app.UseStatusCodePages();
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
