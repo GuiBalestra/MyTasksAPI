@@ -13,7 +13,7 @@ namespace MyTasksAPI.Models
 
         [Required]
         [EmailAddress]
-        public string EMail { get; set; }
+        public string Email { get; set; }
 
         [Required]
         public string Senha { get; set; }

@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyTasksAPI.Database;
+using MyTasksAPI.Repositories;
+using MyTasksAPI.Repositories.Contracts;
 
 namespace MyTasksAPI
 {
@@ -31,6 +33,11 @@ namespace MyTasksAPI
             {
                 op.UseSqlite("Data Source=Database\\MinhasTarefas.db");
             });
+
+            /* Repositories */
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<ITarefaRepository, TarefaRepository>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
