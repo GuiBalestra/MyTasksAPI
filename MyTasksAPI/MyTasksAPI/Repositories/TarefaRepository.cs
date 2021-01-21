@@ -31,7 +31,8 @@ namespace MyTasksAPI.Repositories
 
         public List<Tarefa> Sincronizacao(List<Tarefa> tarefas)
         {
-            var tarefasNovas = tarefas.Where(a => a.IdTarefaApi == 0);
+            var tarefasNovas = tarefas.Where(a => a.IdTarefaApi == 0).ToList();
+            var tarefasExcluidasAtualizadas = tarefas.Where(a => a.IdTarefaApi != 0).ToList();
 
             // Cadastrar novos registros
             if (tarefasNovas.Count() > 0)
@@ -42,7 +43,6 @@ namespace MyTasksAPI.Repositories
                 }
             }
 
-            var tarefasExcluidasAtualizadas = tarefas.Where(a => a.IdTarefaApi != 0);
 
             // Atualização de registro (Excluir)
             if (tarefasExcluidasAtualizadas.Count() > 0)
