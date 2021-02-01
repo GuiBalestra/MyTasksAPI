@@ -11,5 +11,7 @@ namespace MyTasksAPI.Repositories.Contracts
         void Cadastrar(ApplicationUser usuario, string senha);
 
         ApplicationUser Obter(String email, string senha);
+
+        ApplicationUser Obter(string id);
     }
 }
