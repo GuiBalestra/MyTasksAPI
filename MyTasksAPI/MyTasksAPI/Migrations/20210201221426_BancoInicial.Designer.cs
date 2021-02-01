@@ -9,8 +9,8 @@ using MyTasksAPI.Database;
 namespace MyTasksAPI.Migrations
 {
     [DbContext(typeof(MinhasTarefasContext))]
-    [Migration("20210201220007_Token-Usuario")]
-    partial class TokenUsuario
+    [Migration("20210201221426_BancoInicial")]
+    partial class BancoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -292,7 +292,7 @@ namespace MyTasksAPI.Migrations
             modelBuilder.Entity("MyTasksAPI.Models.Token", b =>
                 {
                     b.HasOne("MyTasksAPI.Models.ApplicationUser", "Usuario")
-                        .WithMany()
+                        .WithMany("Tokens")
                         .HasForeignKey("UsuarioId");
                 });
 #pragma warning restore 612, 618

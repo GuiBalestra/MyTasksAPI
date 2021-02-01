@@ -290,7 +290,7 @@ namespace MyTasksAPI.Migrations
             modelBuilder.Entity("MyTasksAPI.Models.Token", b =>
                 {
                     b.HasOne("MyTasksAPI.Models.ApplicationUser", "Usuario")
-                        .WithMany()
+                        .WithMany("Tokens")
                         .HasForeignKey("UsuarioId");
                 });
 #pragma warning restore 612, 618
