@@ -11,7 +11,7 @@ namespace MyTasksAPI.Models
 
         public string RefreshToken { get; set; }
 
-        public ApplicationUser usuario { get; set; }
+        public ApplicationUser Usuario { get; set; }
 
         public bool Utilizado { get; set; }
 
