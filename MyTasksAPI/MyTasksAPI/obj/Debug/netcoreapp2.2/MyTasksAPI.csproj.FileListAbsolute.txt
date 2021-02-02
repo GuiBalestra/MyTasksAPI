@@ -14,3 +14,6 @@ C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\net
 C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.pdb
 C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.dll
 C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.pdb
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\bin\Debug\netcoreapp2.2\MyTasksAPI.xml
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.csprojAssemblyReference.cache
+C:\Users\GUI\Repositories\Backend\MyTasksAPI\MyTasksAPI\MyTasksAPI\obj\Debug\netcoreapp2.2\MyTasksAPI.csproj.CoreCompileInputs.cache

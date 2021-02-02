@@ -24,6 +24,7 @@ using MyTasksAPI.V1.Helpers.Swagger;
 using MyTasksAPI.V1.Models;
 using MyTasksAPI.V1.Repositories;
 using MyTasksAPI.V1.Repositories.Contracts;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace MyTasksAPI
 {
@@ -69,6 +70,19 @@ namespace MyTasksAPI
             });
 
             services.AddSwaggerGen(cfg => {
+                cfg.AddSecurityDefinition("Bearer", new ApiKeyScheme() { 
+                    In = "header",
+                    Type = "apiKey",
+                    Description = "Adicione o JSON Web Token (JWT) para autenticar.",
+                    Name = "Authorization"
+                });
+
+                var security = new Dictionary<string, IEnumerable<string>>()
+                {
+                    { "Bearer", new string[] { } }
+                };
+                cfg.AddSecurityRequirement(security);
+
                 cfg.ResolveConflictingActions(apiDescription => apiDescription.First());
                 cfg.SwaggerDoc("v1.0", new Swashbuckle.AspNetCore.Swagger.Info()
                 {
@@ -148,6 +162,11 @@ namespace MyTasksAPI
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(cfg => {
+                cfg.SwaggerEndpoint("/swagger/v1.0/swagger.json", "MyTasksAPI - V1.0");
+                cfg.RoutePrefix = String.Empty;
+            });
         }
     }
 }
