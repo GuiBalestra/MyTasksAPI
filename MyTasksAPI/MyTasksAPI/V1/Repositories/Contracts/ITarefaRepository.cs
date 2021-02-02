@@ -1,10 +1,10 @@
-﻿using MyTasksAPI.Models;
+﻿using MyTasksAPI.V1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyTasksAPI.Repositories.Contracts
+namespace MyTasksAPI.V1.Repositories.Contracts
 {
     public interface ITarefaRepository
     {

@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MyTasksAPI.Models;
-using MyTasksAPI.Repositories.Contracts;
+using MyTasksAPI.V1.Models;
+using MyTasksAPI.V1.Repositories.Contracts;
 
-namespace MyTasksAPI.Controllers
+namespace MyTasksAPI.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

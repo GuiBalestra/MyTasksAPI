@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyTasksAPI.Models
+namespace MyTasksAPI.V1.Models
 {
     public class UsuarioDTO
     {

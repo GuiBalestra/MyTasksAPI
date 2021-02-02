@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using MyTasksAPI.Models;
-using MyTasksAPI.Repositories.Contracts;
+using MyTasksAPI.V1.Models;
+using MyTasksAPI.V1.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyTasksAPI.Repositories
+namespace MyTasksAPI.V1.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {

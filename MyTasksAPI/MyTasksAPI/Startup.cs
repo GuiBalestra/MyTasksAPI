@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
 using MyTasksAPI.Database;
-using MyTasksAPI.Models;
-using MyTasksAPI.Repositories;
-using MyTasksAPI.Repositories.Contracts;
+using MyTasksAPI.V1.Helpers.Swagger;
+using MyTasksAPI.V1.Models;
+using MyTasksAPI.V1.Repositories;
+using MyTasksAPI.V1.Repositories.Contracts;
 
 namespace MyTasksAPI
 {
@@ -57,6 +60,40 @@ namespace MyTasksAPI
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
             .AddJsonOptions(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            services.AddApiVersioning(cfg =>
+            {
+                cfg.ReportApiVersions = true;
+                cfg.AssumeDefaultVersionWhenUnspecified = true;
+                cfg.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+            });
+
+            services.AddSwaggerGen(cfg => {
+                cfg.ResolveConflictingActions(apiDescription => apiDescription.First());
+                cfg.SwaggerDoc("v1.0", new Swashbuckle.AspNetCore.Swagger.Info()
+                {
+                    Title = "MyTasksAPI - V1.0",
+                    Version = "v1.0"
+                });
+                var CaminhoProjeto = PlatformServices.Default.Application.ApplicationBasePath;
+                var NomeProjeto = $"{PlatformServices.Default.Application.ApplicationName}.xml";
+                var CaminhoArquivoXMLComentario = Path.Combine(CaminhoProjeto, NomeProjeto);
+                cfg.IncludeXmlComments(CaminhoArquivoXMLComentario);
+                cfg.DocInclusionPredicate((docName, apiDesc) => {
+                    var actionApiVersionModel = apiDesc.ActionDescriptor?.GetApiVersion();
+                    // would mean this action is unversioned and should be included everywhere
+                    if (actionApiVersionModel == null)
+                    {
+                        return true;
+                    }
+                    if (actionApiVersionModel.DeclaredApiVersions.Any())
+                    {
+                        return actionApiVersionModel.DeclaredApiVersions.Any(v => $"v{v.ToString()}" == docName);
+                    }
+                    return actionApiVersionModel.ImplementedApiVersions.Any(v => $"v{v.ToString()}" == docName);
+                });
+                cfg.OperationFilter<ApiVersionOperationFilter>();
+            });
 
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<MinhasTarefasContext>().AddDefaultTokenProviders();
 
